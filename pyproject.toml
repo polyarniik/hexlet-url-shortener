@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "url-shortener"
+version = "0.1.0"
+description = "Webapp for make short links"
+authors = ["polyarniik <rus.safiullin.01@mail.ru>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^5.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

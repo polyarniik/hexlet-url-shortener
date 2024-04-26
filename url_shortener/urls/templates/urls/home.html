@@ -1,0 +1,18 @@
+{% extends "urls/partials/base.html" %}
+{% block title %}
+    URL Shortener
+{% endblock title %}
+{% block content %}
+    <h1>URL Shortener</h1>
+    <div>
+        <form action="{% url 'urls:create_url' %}" method="post">
+            {% csrf_token %}
+            <input type="text" id="url_id" name="url" placeholder="URL" />
+            <button type='submit'>Make Short</button>
+        </form>
+    </div>
+    <h3>
+        Last shorted url:
+        <a href="{% url 'urls:redirect_view' hash=url.hash %}" target="_blank">{{ url.url }}</a>
+    </h3>
+{% endblock content %}
